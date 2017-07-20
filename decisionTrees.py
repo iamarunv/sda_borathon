@@ -131,8 +131,7 @@ def create_prediction_table():
             cpu_prdct = cpu_tree.predict([j, i])
             memory_prdct = memory_tree.predict([j, i])
             disk_prdct = disk_tree.predict([j, i])
-            prediction_table.append(['vm_%d' %(j), i, cpu_prdct[0], memory_prdct[0], disk_prdct[0]])
-            print prediction_table
+            prediction_table.append([j, i, cpu_prdct[0], memory_prdct[0], disk_prdct[0]])
     return prediction_table
 
 
