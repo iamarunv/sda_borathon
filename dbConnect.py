@@ -21,7 +21,7 @@ class DBConnector():
 
     def get_cpu_features(self):
         #returns features as list of lists.
-        qry = 'select vm_id, timestamp, cpu_usage_percent, admin_historic_decision_cpu from sda_usage_data'
+        qry = 'select vm_id_map, timestamp, cpu_usage_percent, admin_historic_decision_cpu from sda_usage_data'
         connection = self.mysql_connect()
         cursor = connection.cursor()
         cursor.execute(qry)
