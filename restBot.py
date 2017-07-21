@@ -1,9 +1,9 @@
 from flask import Flask, request, make_response
-import json
+import json, os
 from slackclient import SlackClient
 
 # bot user token
-SLACK_BOT_TOKEN = "xoxb-216284053943-SJ7QkdY4cxQ4lGkIFC5KG99O"
+SLACK_BOT_TOKEN = os.environ["SLACK_API_TOKEN"]
 sc = SlackClient(SLACK_BOT_TOKEN)
 
 # Flask webserver for incoming traffic from Slack
