@@ -13,11 +13,19 @@ slackChannel = "admin-queue"
 # get the token from os environment
 def getSlackToken ():
     # hard code the token as of now
+<<<<<<< HEAD:src/slackOps.py
     slack_token = "xoxb-216284053943-MgI9cATVnvLRB4tby0OiELpB"
     try:
         slack_token = os.environ["SLACK_API_TOKEN"]
     except KeyError:
         slack_token = "xoxb-216284053943-MgI9cATVnvLRB4tby0OiELpB"
+=======
+    slack_token = None
+    try:
+        slack_token = os.environ["SLACK_API_TOKEN"]
+    except KeyError:
+        slack_token = None
+>>>>>>> f5b242c8973d57f8aae77a31edd697f074af96ab:slackOps.py
         pass
     return slack_token
 
